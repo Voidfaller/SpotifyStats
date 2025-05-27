@@ -18,7 +18,7 @@ UNIQUE_TRACKS_LIMIT = 50
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     client_id=client_id,
     client_secret=client_secret,
-    redirect_uri="http://localhost:8888/callback",
+    redirect_uri=redirect_uri,
     scope="user-read-recently-played user-top-read"
 ))
 

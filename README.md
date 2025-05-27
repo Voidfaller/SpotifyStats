@@ -15,7 +15,7 @@ This Python script fetches your Spotify listening history and top tracks to find
 
 - Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications)
 - Create an app to get your `CLIENT_ID` and `CLIENT_SECRET`.
-- Set the Redirect URI to `http://localhost:8888/callback` (or your preferred redirect URL).
+- Set the Redirect URI to `http://0.0.0.0:8888/callback` (or your preferred redirect URL).
 
 ### 2. Clone this repo
 
@@ -24,9 +24,20 @@ git clone https://github.com/Voidfaller/SpotifyStats.git
 cd SpotifyStats
 ```
 
-### 3. Fill in the Dummy config.env with your api credentials
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Fill in the Dummy config.env with your api credentials
 ```.env
 SPOTIPY_CLIENT_ID=your_client_id_here
 SPOTIPY_CLIENT_SECRET=your_client_secret_here
-SPOTIPY_REDIRECT_URI=http://localhost:8888/callback
+SPOTIPY_REDIRECT_URI=your_redirect_uri_here
+```
+
+### 5. Run the Script
+
+```bash
+python spotifystats.py
 ```
